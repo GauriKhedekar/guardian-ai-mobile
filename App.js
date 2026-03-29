@@ -11,7 +11,7 @@ import * as WebBrowser from 'expo-web-browser';
 WebBrowser.maybeCompleteAuthSession();
 
 // 🔐 OAuth Config
-const CLIENT_ID = "442051601061-00ghrhjubvsjvg69ahlpjavt5lva6pqo.apps.googleusercontent.com";
+const CLIENT_ID = "";
 
 const discovery = {
   authorizationEndpoint: "https://accounts.google.com/o/oauth2/v2/auth",
