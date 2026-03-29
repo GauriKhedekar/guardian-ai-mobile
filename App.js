@@ -76,19 +76,13 @@ const loginWithGoogle = async () => {
 
   console.log("Redirect URI:", redirectUri);
 
-  const request = new AuthSession.AuthRequest({
-    clientId: CLIENT_ID,
-    scopes: [
-      "openid",
-      "profile",
-      "email",
-      "https://www.googleapis.com/auth/gmail.send",
-    ],
-    redirectUri,
-    responseType: AuthSession.ResponseType.Token,
-  });
-
-  const result = await request.promptAsync(discovery);
+const result = await AuthSession.startAsync({
+  authUrl:
+    `${discovery.authorizationEndpoint}?client_id=${CLIENT_ID}` +
+    `&redirect_uri=${encodeURIComponent(redirectUri)}` +
+    `&response_type=token` +
+    `&scope=${encodeURIComponent("openid profile email https://www.googleapis.com/auth/gmail.send")}`,
+});
 
   if (result.type === "success") {
     console.log(result);
@@ -98,6 +92,7 @@ const loginWithGoogle = async () => {
     Alert.alert("Login Failed ❌");
   }
 };
+
   // 🔥 Firebase Function
   const addTaskToFirebase = async () => {
     try {
