@@ -1,0 +1,39 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Expo
+.expo/
+.expo-shared/
+dist/
+
+# Android build
+android/app/build/
+android/build/
+
+# iOS (future)
+ios/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+
+# Firebase
+.firebase/
+.firebaserc
+
+# Keys
+*.keystore
+*.jks
+
+# IDE
+.vscode/
+.idea/
