@@ -1,52 +1,39 @@
-# Node modules
+# Node
 node_modules/
 npm-debug.log*
-yarn-error.log*
 yarn-debug.log*
+yarn-error.log*
 
-# Expo / React Native
+# Expo
 .expo/
 .expo-shared/
-*.expo.js
-*.expo.png
-*.expo.json
 dist/
-android/
+
+# Android build
+android/app/build/
+android/build/
+
+# iOS (future)
 ios/
-build/
-*.keystore
-*.jks
 
-# Debug / log files
+# Logs
 *.log
-*.tmp
 
-# OS generated files
+# OS
 .DS_Store
 Thumbs.db
 
-# IDE / Editor
-.vscode/
-.idea/
-*.sublime-workspace
-*.sublime-project
-
-# Environment / Secrets
+# Env
 .env
-.env.*.local
-*.p12
-*.mobileprovision
-google-services.json
-GoogleService-Info.plist
 
-# Firebase / Supabase
+# Firebase
 .firebase/
 .firebaserc
-supabase/config/
-supabase/migrations/
 
-# TypeScript build output (if using TS)
-*.tsbuildinfo
+# Keys
+*.keystore
+*.jks
 
-# Misc
-*.iml
+# IDE
+.vscode/
+.idea/
